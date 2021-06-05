@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Evaluation2;
+package Evaluation3;
 
 /**
  *
@@ -12,13 +12,13 @@ package Evaluation2;
 //product id example AVpgnnzJilAPnD_xu_7Q
 import java.util.Scanner;
 
-public class Evaluation2 {
+public class Evaluation3 {
     public static void main (String args[]){
         int done=0, option, quantity, searchInt;
         String search;
         
         System.out.println("Welcome to my ERP System for Data Structures");
-        System.out.println("This is the Evaluation 2, type an option:");
+        System.out.println("This is the Evaluation 3, type an option:");
         
         Functions func = new Functions();
         Node rootNode= func.CreateBinaryTree();
@@ -28,7 +28,8 @@ public class Evaluation2 {
             System.out.println("2-Search Product by Name");
             System.out.println("3-Remove Product by Hash Id");
             System.out.println("4-Binary Tree Search by Numeric Id");
-            System.out.println("5-End Evaluation");
+            System.out.println("5-Binary Search(Not The Binary Tree)");
+            System.out.println("6-End Evaluation");
             option = new Scanner(System.in).nextInt();
             switch(option){
                 case 1:
@@ -53,6 +54,11 @@ public class Evaluation2 {
                     System.out.println("Type the product Numeric Id for binary tree search:");
                     searchInt = new Scanner(System.in).nextInt();
                     func.FindInBinaryTree(rootNode, searchInt);
+                break;
+                case 5:
+                    System.out.println("Type the product Numeric Id for binary search:");
+                    searchInt = new Scanner(System.in).nextInt();
+                    func.FindByBinarySearch(searchInt);
                 break;
                 default:
                     System.out.println("Program ended!");
